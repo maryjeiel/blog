@@ -10,6 +10,8 @@ author:
   avatar: /assets/profile.jpg
   github: maryjeiel
   x: MaryJeiel
+  facebook: "https://www.facebook.com/itsmjta/"
+  instagram: "https://www.instagram.com/maryjeiel.arnaiz/?utm_source=qr&r=nametag"
 
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
