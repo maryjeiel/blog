@@ -2,6 +2,7 @@
 layout: post
 title: "Journal of Truths"
 date: 2026-05-15
+published: false
 ---
 
 Raw and Honest Truth 
