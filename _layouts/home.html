@@ -2,43 +2,47 @@
 layout: default
 ---
 
-<div class="home-grid">
+<section class="profile">
 
-  <aside class="profile">
-    <img
-      class="avatar"
-      src="{{ site.author.avatar | relative_url }}"
-      alt="{{ site.author.name }}"
-    >
+  <img
+    class="profile-photo"
+    src="{{ site.author.avatar | relative_url }}"
+    alt="{{ site.author.name }}"
+  >
 
-    <h1>{{ site.author.name }}</h1>
+  <h1>{{ site.author.name }}</h1>
 
-    <div class="profile-links">
-      <a href="https://x.com/{{ site.author.x }}" target="_blank" rel="noreferrer">X</a>
-      <a href="{{ site.author.facebook }}" target="_blank" rel="noreferrer">Facebook</a>
-      <a href="{{ site.author.instagram }}" target="_blank" rel="noreferrer">Instagram</a>
-      <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noreferrer">GitHub</a>
-    </div>
-  </aside>
+  <nav class="profile-links">
+    <a href="https://x.com/{{ site.author.x }}" target="_blank" rel="noreferrer">X</a>
+    <a href="{{ site.author.facebook }}" target="_blank" rel="noreferrer">Facebook</a>
+    <a href="{{ site.author.instagram }}" target="_blank" rel="noreferrer">Instagram</a>
+    <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noreferrer">GitHub</a>
+  </nav>
 
-  <section class="posts">
-    <h1 class="section-title">Essays</h1>
+</section>
 
-    {% for post in site.posts %}
-      <article class="post-row">
-        <h2>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </h2>
+<section class="post-list">
 
-        <time datetime="{{ post.date | date_to_xmlschema }}">
-          {{ post.date | date: "%B %-d, %Y" }}
-        </time>
+  {% for post in site.posts %}
+    <article class="post-item">
 
-        {% if post.excerpt %}
-          <p>{{ post.excerpt | strip_html | strip_newlines | truncatewords: 30 }}</p>
-        {% endif %}
-      </article>
-    {% endfor %}
-  </section>
+      <h2>
+        <a href="{{ post.url | relative_url }}">
+          {{ post.title }}
+        </a>
+      </h2>
 
-</div>
+      <time datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date: "%B %-d, %Y" }}
+      </time>
+
+      {% if post.excerpt %}
+        <p>
+          {{ post.excerpt | strip_html | strip_newlines | truncatewords: 32 }}
+        </p>
+      {% endif %}
+
+    </article>
+  {% endfor %}
+
+</section>

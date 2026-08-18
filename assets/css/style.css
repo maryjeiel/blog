@@ -1,219 +1,172 @@
-:root {
-  --background: #ffffff;
-  --text: #111111;
-  --muted: #777777;
-  --border: #e5e5e5;
-}
-
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 body {
   margin: 0;
-  background: var(--background);
-  color: var(--text);
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Helvetica,
-    Arial,
-    sans-serif;
-  line-height: 1.6;
+  background: #ffffff;
+  color: #111111;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.65;
 }
 
 a {
-  color: inherit;
+  color: #111111;
 }
 
-.site-header {
-  border-bottom: 1px solid var(--border);
-}
-
-.header-inner {
-  max-width: 1040px;
-  min-height: 72px;
+.site-shell {
+  width: 100%;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 0 28px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 72px 24px 100px;
 }
 
-.brand {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.35rem;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.nav a {
-  color: var(--muted);
-  font-size: 0.9rem;
-  text-decoration: none;
-}
-
-.nav a:hover {
-  color: var(--text);
-}
-
-.site-main {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 72px 28px 96px;
-}
-
-.home-grid {
-  display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
-  gap: 88px;
-  align-items: start;
-}
+/* PROFILE */
 
 .profile {
-  position: sticky;
-  top: 48px;
+  text-align: center;
+  margin-bottom: 64px;
+  padding-bottom: 44px;
+  border-bottom: 1px solid #dddddd;
 }
 
-.avatar {
+.profile-photo {
   display: block;
   width: 112px;
   height: 112px;
+  margin: 0 auto 18px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
 }
 
 .profile h1 {
-  margin: 0 0 12px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.45rem;
+  margin: 0 0 14px;
+  font-size: 1.65rem;
+  font-weight: normal;
 }
 
 .profile-links {
   display: flex;
-  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 18px;
 }
 
 .profile-links a {
-  color: var(--muted);
+  color: #555555;
   font-size: 0.9rem;
   text-decoration: none;
 }
 
 .profile-links a:hover {
-  color: var(--text);
+  color: #000000;
+  text-decoration: underline;
 }
 
-.section-title {
-  margin: 0 0 38px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 2rem;
-  font-weight: 600;
+/* POSTS */
+
+.post-list {
+  width: 100%;
 }
 
-.post-row {
-  padding: 0 0 34px;
-  margin: 0 0 34px;
-  border-bottom: 1px solid var(--border);
+.post-item {
+  margin-bottom: 34px;
+  padding-bottom: 34px;
+  border-bottom: 1px solid #e4e4e4;
 }
 
-.post-row:last-child {
+.post-item:last-child {
   border-bottom: 0;
 }
 
-.post-row h2 {
-  margin: 0 0 7px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.42rem;
-  line-height: 1.3;
+.post-item h2 {
+  margin: 0 0 6px;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: normal;
 }
 
-.post-row h2 a {
+.post-item h2 a {
   text-decoration: none;
 }
 
-.post-row h2 a:hover {
+.post-item h2 a:hover {
   text-decoration: underline;
-  text-underline-offset: 4px;
+  text-underline-offset: 3px;
 }
 
-.post-row time {
+.post-item time {
   display: block;
-  margin-bottom: 11px;
-  color: var(--muted);
+  margin-bottom: 12px;
+  color: #777777;
   font-size: 0.82rem;
 }
 
-.post-row p {
-  max-width: 650px;
+.post-item p {
   margin: 0;
-  color: #555555;
-  font-family: Georgia, "Times New Roman", serif;
+  color: #444444;
   font-size: 1rem;
+  line-height: 1.6;
 }
 
+/* INDIVIDUAL BLOG POST */
+
 .article {
-  max-width: 700px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .back {
   display: inline-block;
-  margin-bottom: 52px;
-  color: var(--muted);
-  font-size: 0.88rem;
+  margin-bottom: 50px;
+  color: #666666;
+  font-size: 0.9rem;
   text-decoration: none;
 }
 
 .back:hover {
-  color: var(--text);
+  color: #000000;
+  text-decoration: underline;
 }
 
 .article-header {
-  padding-bottom: 30px;
-  margin-bottom: 38px;
-  border-bottom: 1px solid var(--border);
+  margin-bottom: 40px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid #dddddd;
 }
 
 .article-header h1 {
-  margin: 0 0 12px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2rem, 6vw, 3rem);
+  margin: 0 0 10px;
+  font-size: 2.2rem;
   line-height: 1.15;
-  font-weight: 600;
+  font-weight: normal;
 }
 
 .article-header time {
-  color: var(--muted);
-  font-size: 0.86rem;
+  color: #777777;
+  font-size: 0.85rem;
 }
 
 .article-content {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.08rem;
-  line-height: 1.85;
+  font-size: 1.05rem;
+  line-height: 1.75;
 }
 
 .article-content p {
-  margin: 0 0 1.5em;
+  margin: 0 0 1.45em;
 }
 
-.article-content h2,
+.article-content h2 {
+  margin: 2em 0 0.7em;
+  font-size: 1.5rem;
+}
+
 .article-content h3 {
-  margin: 2.2em 0 0.7em;
-  line-height: 1.3;
+  margin: 1.8em 0 0.6em;
+  font-size: 1.25rem;
 }
 
 .article-content img {
@@ -223,50 +176,34 @@ a {
 
 .article-content blockquote {
   margin: 2em 0;
-  padding-left: 22px;
-  border-left: 2px solid var(--text);
-  color: #444444;
+  padding-left: 20px;
+  border-left: 2px solid #222222;
 }
 
-@media (max-width: 760px) {
-  .header-inner {
-    min-height: 62px;
-    padding: 0 20px;
+@media (max-width: 600px) {
+  html {
+    font-size: 17px;
   }
 
-  .nav {
-    gap: 16px;
-  }
-
-  .site-main {
-    padding: 46px 20px 72px;
-  }
-
-  .home-grid {
-    display: block;
+  .site-shell {
+    padding: 48px 20px 70px;
   }
 
   .profile {
-    position: static;
-    padding-bottom: 42px;
-    margin-bottom: 42px;
-    border-bottom: 1px solid var(--border);
+    margin-bottom: 48px;
+    padding-bottom: 36px;
   }
 
-  .avatar {
-    width: 88px;
-    height: 88px;
+  .profile-photo {
+    width: 96px;
+    height: 96px;
   }
 
-  .section-title {
-    font-size: 1.7rem;
+  .post-item h2 {
+    font-size: 1.35rem;
   }
 
-  .post-row h2 {
-    font-size: 1.3rem;
-  }
-
-  .article-content {
-    font-size: 1.03rem;
+  .article-header h1 {
+    font-size: 1.8rem;
   }
 }
