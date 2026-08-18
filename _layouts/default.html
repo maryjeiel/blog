@@ -1,57 +1,36 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{{ site.description }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="/assets/css/style.css">
-</head>
-<body>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <header class="topbar">
-    <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
-      <i class="fas fa-circle-half-stroke"></i>
-    </button>
-    <span class="site-title">{{ site.title }}</span>
-    <button class="icon-btn" id="search-toggle" aria-label="Search">
-      <i class="fas fa-magnifying-glass"></i>
-    </button>
+  <title>
+    {% if page.title %}
+      {{ page.title }} · {{ site.title }}
+    {% else %}
+      {{ site.title }}
+    {% endif %}
+  </title>
+
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="{{ '/' | relative_url }}">MJ</a>
+
+      <nav class="nav">
+        <a href="{{ '/' | relative_url }}">Essays</a>
+        <a href="https://x.com/{{ site.author.x }}" target="_blank" rel="noreferrer">X</a>
+        <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main class="site-main">
     {{ content }}
   </main>
-<footer class="subscribe-footer">
-  <div id="mc_embed_signup">
-    <form action="https://gmail.us11.list-manage.com/subscribe/post?u=b9f64e6dca6a1e3aee81197f7&amp;id=2b1af39efc&amp;f_id=008da1e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-      <div id="mc_embed_signup_scroll">
-        <input type="email" name="EMAIL" class="subscribe-input" id="mce-EMAIL" required="" placeholder="Enter your email address">
-        <div aria-hidden="true" style="position: absolute; left: -5000px;">
-          <input type="text" name="b_b9f64e6dca6a1e3aee81197f7_2b1af39efc" tabindex="-1" value="">
-        </div>
-        <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="subscribe-btn" value="Subscribe">
-      </div>
-    </form>
-  </div>
-</footer>
-  <script>
-    const toggle = document.getElementById('theme-toggle');
-    const html = document.documentElement;
-    const saved = localStorage.getItem('theme') || 'light';
-    html.setAttribute('data-theme', saved);
-
-    toggle.addEventListener('click', () => {
-      const current = html.getAttribute('data-theme');
-      const next = current === 'light' ? 'dark' : 'light';
-      html.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-    });
-  </script>
-
 </body>
 </html>

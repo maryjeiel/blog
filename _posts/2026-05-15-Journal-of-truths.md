@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Journal of Truths"
+date: 2026-05-15
+---
+
 Raw and Honest Truth 
 
 May 14: I'm afraid of losing you. It feels like losing myself in the process. I know it sounds intense, but it's the truth I'm holding right now... I gave you a level of emotional investment i don't usually give anyone, and now the idea of losing you feels like collapse, not just sadness.

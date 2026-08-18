@@ -2,14 +2,20 @@
 layout: default
 ---
 
-<div class="post-page">
-  <a href="/" class="back-link"><i class="fas fa-arrow-left"></i> Back</a>
-  <article>
-    <h1 class="post-page-title">{{ page.title }}</h1>
-    <p class="post-page-date">{{ page.date | date: "%B %d, %Y" }}</p>
-    <hr class="divider">
-    <div class="post-content">
-      {{ content }}
-    </div>
-  </article>
-</div>
+<article class="article">
+
+  <a class="back" href="{{ '/' | relative_url }}">← Essays</a>
+
+  <header class="article-header">
+    <h1>{{ page.title }}</h1>
+
+    <time datetime="{{ page.date | date_to_xmlschema }}">
+      {{ page.date | date: "%B %-d, %Y" }}
+    </time>
+  </header>
+
+  <div class="article-content">
+    {{ content }}
+  </div>
+
+</article>
