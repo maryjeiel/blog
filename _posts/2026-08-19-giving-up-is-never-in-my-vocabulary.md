@@ -51,3 +51,8 @@ I just need a little space to carry the weight without breaking under all of it.
 I’ve suffered too much, lost too much, and survived too much to give up now.
 
 Giving up is still not in my vocabulary.
+EOF
+
+git add _posts/2026-08-19-giving-up-is-never-in-my-vocabulary.md
+git commit -m "Update Giving Up Is Never in My Vocabulary"
+git push
