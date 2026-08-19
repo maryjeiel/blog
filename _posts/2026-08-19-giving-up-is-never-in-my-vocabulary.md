@@ -10,7 +10,7 @@ Sometimes everything just feels too heavy, and you need something that makes you
 
 Do you necessarily need someone’s words? Sometimes, yes. It can make you feel less sad and less alone, especially when those words come from the person you love.
 
-I’m not trying to be dramatic. Life has just been so fucking rough lately.
+I’m not trying to be dramatic. Life has just been so rough lately.
 
 Arguments, failures, disappointments, break-ups, family issues.
 
@@ -34,7 +34,7 @@ And along the way, I met people who taught me so many things I didn’t know. I�
 
 He has been patient with me, corrected me, and kept teaching me even when I made it exhausting for him.
 
-And I know I still fuck up.
+And I know I still messed up.
 
 There are things he already taught me that I still fail to apply properly. Sometimes I’m too slow. Sometimes I disappoint him. And that hurts, especially because I know how much he just wants me to learn.
 
